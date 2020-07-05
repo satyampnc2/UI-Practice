@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: aqua;
+}
+
+.nav{
+    width: 100%;
+    background-color: sienna;
+    display: flex;
+    height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 0;
+    color: white;
+    font-weight: 600;
+    overflow-x: hidden;
+}
+
+.logo{
+    letter-spacing: 4px;
+    font-size: 20px;
+    
+}
+
+.lines{
+    width: 15px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    cursor: pointer;
+    
+}
+.line1,.line2,.line3{
+    width: 20px;
+    height: 2px;
+    background-color:white;
+    transition: all .3s ease;
+}
+
+
+.options{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    list-style: none;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:800px){
+    .lines{
+        display: flex;
+    }   
+    .options{
+        /* transform: translatex(100%); */
+        height: 92vh;
+        right: -40%;
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 8vh;
+        background-color: sienna;
+        transition: right .5s ;
+    }
+    .options.toggle{
+        right: 0;
+    } 
+
+    @keyframes navlinkfade {
+        0%{
+            opacity: 0;
+            transform: translatex(50px);
+        } 100%{
+            opacity: 1;
+            transform: translatex(0px);
+        }
+    }
+}
+
+.cross .line1{
+    transform: rotate(-45deg) translateY(7px);
+}
+.cross .line2{
+    opacity: 0;
+}
+.cross .line3{
+    transform: rotate(45deg) translateY(-6px);
+}

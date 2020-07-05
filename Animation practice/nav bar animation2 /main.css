@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+    display: flex;
+    background-color: bisque;
+    height: 8vh;
+    align-items: center;
+}
+.lines{
+    width: 30px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    cursor: pointer;
+}
+.line1,.line2,.line3{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+}
+.items{
+    display: flex;
+    width: 100vw;
+    font-size: 18px;
+    align-items: center;
+    justify-content: space-around;   
+    text-transform: uppercase; 
+}
+
+@media screen  and (max-width:800px){
+    .lines{
+        display: flex;
+        position: absolute;
+        right: 20px;
+    }
+    .items{
+        position: absolute;
+        top: 8vh;
+        width: 100%;
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: bisque;
+        clip-path: circle(100px at 90% -20%);
+        transition: clip-path 1s ease;
+    }
+    .toggle{
+        clip-path: circle(1000px at 90% -20%);
+    }
+
+    .items div{
+        opacity: 0;
+    }
+
+    .item1{
+        transition: opacity .2s ease .2s;
+    }
+    .item2{
+        transition: opacity .2s ease .4s;
+    }
+    .item3{
+        transition: opacity .2s ease .6s;
+    }
+
+    .items .fade{
+        opacity: 1;
+    }
+    
+
+
+}

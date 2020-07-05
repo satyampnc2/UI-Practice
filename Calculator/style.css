@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('file-20180226-140213-yox11e.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: monospace;
+}
+.frame{
+    width: 350px;
+    height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#E8E8E8;
+    border: 1px solid gray;
+    box-shadow: 7px 7px 7px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#result-container{
+    flex: 1;
+    position: relative;
+}
+
+.result{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 20px;
+}
+
+.bottom{
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom .left{
+    flex: 5;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.bottom .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom .right div{
+    flex: 1;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom .left div{
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.operator:hover, .num:hover, #calc:hover{
+    cursor: pointer;
+    background-color: darkgoldenrod;
+}
+
+.bottom .right{
+    flex: 2;
+}
+
+.divider{
+    width: 1px;
+    background-color: rgb(114, 114, 126);
+}
