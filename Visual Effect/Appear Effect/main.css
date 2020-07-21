@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+img{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    background-color: rgb(240, 224, 224);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 40%;
+    background-color: rgba(209, 144, 59, 0.473);
+    padding: 2rem ;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-in-out;
+}
+
+.fadein{
+    transform: translateY(0px);
+    opacity: 1;
+}
