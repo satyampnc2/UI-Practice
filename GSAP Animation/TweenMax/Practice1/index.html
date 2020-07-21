@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TweenMax GSAP</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <button class="click">click me</button>
+    <div class="container">
+        <p class="text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim beatae voluptas tempora necessitatibus alias, error est obcaecati non, inventore laborum quas? Architecto illo hic magnam necessitatibus, praesentium doloremque. Magni dicta sequi dolores assumenda ullam, reprehenderit consectetur eos porro quia enim cupiditate, iusto vitae. Unde in ea velit pariatur sed ullam?
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script>
+        var btn = document.getElementsByClassName('click')[0];
+        btn.addEventListener('click', () => {
+                TweenMax.to('.container',1,{opacity:1,top: '50%', transform : 'translate(-50%,-50%)',ease: "elastic.out(1, .8)"})
+               // TweenMax.to('.container',1,{opacity:0,top: '100%', transform : 'translateX(-50%)'})
+            
+        })
+    </script>
+</body>
+</html>

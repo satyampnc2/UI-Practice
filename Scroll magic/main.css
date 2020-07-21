@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Fondamento', cursive;
+}
+
+section{
+    height: 100vh;
+}
+
+.section1{
+    background: linear-gradient(to left,#4AC29A,#BDFFF3);
+    text-align: center;
+    line-height: 100vh;
+    font-size: 3rem;
+}
+.section2{
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.section2 div{
+    margin: 0 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 20vh;
+    border: 1px solid gray;
+}
+.text1{
+    background-color: #0000ff;
+}
+
+.text2{
+    background-color: antiquewhite;
+}
+
+.text3{
+    background-color: antiquewhite;
+}
+
+.fade-in{
+    opacity: 1;
+}
+
+.box{
+    position: absolute;
+
+    width: 150px;
+    height: 100px;
+    z-index: 2;
+}
+
+.section3{
+    background: linear-gradient(to left,#6190E8,#A7BFE8);
+    text-align: center;
+    line-height: 100vh;
+    font-size: 3rem;
+}
+
